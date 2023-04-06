@@ -2,5 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 ion-icon {
-    font-size: 35px !important;
+    font-size: 30px !important;
   }
+
+.arrow-carousel ion-icon{
+  font-size: 60px !important;
+}
+
+.carousel .control-dots .dot{
+  width: 20px !important;
+  height: 20px !important;
+  background:#e5383b !important;
+  top: 210px !important;
+}
+
+.play-carousel{
+  opacity: 0;
+  border: #e94444e3 4px solid;
+  color: rgb(249 43 47 / 80%);
+  background: #ffffff4d;
+  transition: all.8s;
+}
+
+#carousel:hover .play-carousel{
+  opacity: 1;
+}
+.play-carousel:hover{
+  border: #e94444ab 4px solid;
+  color: #e94444ab;
+  background: #ffffff92;
+}
+#carousel .video-carousel{
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.641);
+  width: 100vw;
+  height: 100vh;
+  z-index: 30;
+}

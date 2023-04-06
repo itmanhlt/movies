@@ -7,15 +7,16 @@ export default function MobileHeader() {
   let [menu, setMenu] = useState(-100);
   return (
     <div>
-      <header className="flex justify-between items-center shadow-lg shadow-gray-500/40 ">
+      {/* Header */}
+      <header className="flex justify-between px-2 items-center shadow-lg shadow-gray-500/40 ">
         <NavLink to="/" className="z-20">
           <img src="./logo-movie.png" className="w-20" />
         </NavLink>
         <NavLink to="/" className="z-20">
-          <strong>MOVIE THEATER</strong>
+          <strong className="text-[#e5383b]">MOVIE THEATER</strong>
         </NavLink>
         <button
-          className="z-20 text-[#FB4226]"
+          className="z-20 text-[#e5383b]"
           onClick={() => {
             menu == -100 ? setMenu(0) : setMenu(-100);
           }}
@@ -23,34 +24,35 @@ export default function MobileHeader() {
           <ion-icon name="menu-outline"></ion-icon>
         </button>
       </header>
+      {/* Menu Bar*/}
       <div
         onClick={() => {
           menu == -100 ? setMenu(0) : setMenu(-100);
         }}
-        className="fixed h-full w-screen flex	"
+        className="fixed h-full w-screen flex"
         style={{ left: `${menu}%`, transition: ".5s" }}
       >
-        <div className="bg-white h-screen w-2/4 ">
+        <div className="bg-[#f5f3f4] h-screen w-2/4 space-y-2 py-2 px-2">
           <UserMenu />
           <hr />
-          <ul className="flex flex-col">
+          <ul className="flex flex-col space-y-2">
             <li className="mr-6">
-              <a className="text-blue-500 hover:text-blue-800" href="#">
+              <a className="text-[#ba181b] hover:font-medium duration-200" href="#">
                 Lịch chiếu
               </a>
             </li>
             <li className="mr-6">
-              <a className="text-blue-500 hover:text-blue-800" href="#cumRap">
+              <a className="text-[#ba181b] hover:font-medium duration-200" href="#cumRap">
                 Cụm rạp
               </a>
             </li>
             <li className="mr-6">
-              <a className="text-blue-500 hover:text-blue-800" href="#tinTuc">
+              <a className="text-[#ba181b] hover:font-medium duration-200" href="#tinTuc">
                 Tin tức
               </a>
             </li>
             <li className="mr-6">
-              <a className="text-blue-500 hover:text-blue-800" href="#ungDung">
+              <a className="text-[#ba181b] hover:font-medium duration-200" href="#ungDung">
                 Ứng dụng
               </a>
             </li>
