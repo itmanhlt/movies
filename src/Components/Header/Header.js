@@ -6,7 +6,7 @@ import MobileHeader from './MobileHeader'
 
 export default function Header() {
   return (
-    <div >
+    <div>
     <Desktop>
       <DesktopHeader/>
     </Desktop>
