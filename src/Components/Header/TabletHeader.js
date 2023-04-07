@@ -4,7 +4,7 @@ import { useState } from "react";
 import UserMenu from "./UserMenu/UserMenu";
 
 export default function TabletHeader() {
-  let [menu, setMenu] = useState(-100);
+  let [menu, setMenu] = useState(-200);
   return (
     <div>
       {/* Header */}
@@ -18,7 +18,13 @@ export default function TabletHeader() {
         <button
           className="z-20 text-[#e5383b]"
           onClick={() => {
-            menu == -100 ? setMenu(0) : setMenu(-100);
+             if (menu == -200) {
+              setMenu(0);
+              document.querySelector("body").style = "overflow: hidden";
+            } else {
+              setMenu(-200);
+              document.querySelector("body").removeAttribute("style");
+            }
           }}
         >
           <ion-icon name="menu-outline"></ion-icon>
@@ -27,9 +33,15 @@ export default function TabletHeader() {
       {/* Menu Bar*/}
       <div
         onClick={() => {
-          menu == -100 ? setMenu(0) : setMenu(-100);
+           if (menu == -200) {
+              setMenu(0);
+              document.querySelector("body").style = "overflow: hidden";
+            } else {
+              setMenu(-200);
+              document.querySelector("body").removeAttribute("style");
+            }
         }}
-        className="fixed h-full w-screen flex"
+        className="fixed h-full w-screen flex top-0 z-20"
         style={{ left: `${menu}%`, transition: ".5s" }}
       >
         <div className="bg-[#f5f3f4] h-screen w-2/4 space-y-2 py-4 px-4">

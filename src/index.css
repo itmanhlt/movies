@@ -56,6 +56,32 @@ ion-icon {
   width:800px;
   height:500px;
 }
+#item-movie .item-c18{
+  background-color: #f44b4e;
+    padding: 0px 5px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+}
+#item-movie .item-title{
+  font-size: 18px;
+    font-weight: 500;
+    display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+   overflow: hidden;
+}
+#item-movie .item-desc{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  font-size: 14px;
+  color: #757575;
+  margin: 0px 0px 16px 0px;
+  font-weight: 600;
+}
 
 @media screen and (max-width: 992px){
   #carousel .video-carousel iframe{
@@ -63,3 +89,4 @@ ion-icon {
   height:400px;
   }
 }
+

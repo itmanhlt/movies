@@ -2,7 +2,7 @@ import { https } from "./config";
 
 export const movieServ = {
     getMovieList:()=>{
-        return https.get("/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP08");
+        return https.get("/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP04");
     },
     getMovieTheater:()=>{
         return https.get("/api/QuanLyRap/LayThongTinLichChieuHeThongRap");
