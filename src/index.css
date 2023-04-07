@@ -40,3 +40,26 @@ ion-icon {
   height: 100vh;
   z-index: 30;
 }
+
+#carousel .video-carousel .close{
+  color: white;
+  position: absolute;
+  right: -5%;
+  top: -8%;
+}
+
+#carousel .video-carousel .close ion-icon{
+  font-size: 50px !important;
+}
+
+#carousel .video-carousel iframe{
+  width:800px;
+  height:500px;
+}
+
+@media screen and (max-width: 992px){
+  #carousel .video-carousel iframe{
+  width:700px;
+  height:400px;
+  }
+}
