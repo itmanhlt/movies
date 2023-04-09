@@ -1,15 +1,9 @@
 import React, { useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import Trailer from "../Trailer/Trailer";
 
-export default function Carousels() {
-  let [video, setVideo] = useState("hidden");
-  let [videoURL, setVideoURL] = useState();
-  let handleVideo = (url) => {
-    setVideo(video == "hidden" ? "visible" : "hidden");
-    setVideoURL(url);
-  };
-
+export default function Carousels({ video, videoURL, handleVideo }) {
   const arrowStyles = {
     position: "absolute",
     zIndex: 2,
@@ -21,21 +15,8 @@ export default function Carousels() {
 
   return (
     <div id="carousel">
-      {/* Video Caroussel */}
-      <div className="video-carousel" style={{ visibility: `${video}` }}>
-        <div className=" absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%]">
-          <button className="close" onClick={() => handleVideo("")}>
-            <ion-icon name="close-outline"></ion-icon>
-          </button>
-          <iframe
-            src={videoURL}
-            title="YouTube video player"
-            frameBorder={0}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          />
-        </div>
-      </div>
+      {/* Trailer */}
+      <Trailer videoURL={videoURL} video={video} handleVideo={handleVideo} />
       {/* Carousel */}
       <Carousel
         autoPlay
@@ -73,7 +54,9 @@ export default function Carousels() {
         <div>
           <button
             onClick={() =>
-              handleVideo("https://www.youtube.com/embed/kBY2k3G6LsM?autoplay=1")
+              handleVideo(
+                "https://www.youtube.com/embed/kBY2k3G6LsM?autoplay=1"
+              )
             }
             className="play-carousel absolute left-[50%] top-[50%] arrow-carousel bg-[##ffffff61] rounded-full pt-[6.5px] pl-[6.5px] translate-y-[-50%] translate-x-[-50%]"
           >
@@ -85,7 +68,9 @@ export default function Carousels() {
         <div>
           <button
             onClick={() =>
-              handleVideo("https://www.youtube.com/embed/uqJ9u7GSaYM?autoplay=1")
+              handleVideo(
+                "https://www.youtube.com/embed/uqJ9u7GSaYM?autoplay=1"
+              )
             }
             className="play-carousel absolute left-[50%] top-[50%] arrow-carousel bg-[##ffffff61] rounded-full pt-[6.5px] pl-[6.5px] translate-y-[-50%] translate-x-[-50%]"
           >
@@ -95,9 +80,11 @@ export default function Carousels() {
         </div>
         {/* banner3 */}
         <div>
-        <button
+          <button
             onClick={() =>
-              handleVideo("https://www.youtube.com/embed/JNZv1SgHv68?autoplay=1")
+              handleVideo(
+                "https://www.youtube.com/embed/JNZv1SgHv68?autoplay=1"
+              )
             }
             className="play-carousel absolute left-[50%] top-[50%] arrow-carousel bg-[##ffffff61] rounded-full pt-[6.5px] pl-[6.5px] translate-y-[-50%] translate-x-[-50%]"
           >
