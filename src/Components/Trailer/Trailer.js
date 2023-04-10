@@ -11,7 +11,7 @@ export default function Trailer({ video, videoURL, handleVideo }) {
           src={videoURL}
           title="YouTube video player"
           frameBorder={0}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allow="accelerometer; autoplay; clipboardgi-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         />
       </div>
