@@ -4,6 +4,7 @@ import { useMediaQuery } from "react-responsive";
 import SearchMovieMobileTablet from "../../Components/SearchMovie/SearchMovieMobileTablet";
 import SearchMovieDesktop from "../../Components/SearchMovie/SearchMovieDesktop";
 import ListMovie from "../../Components/ListMovie/ListMovie";
+import Trailer from "../../Components/Trailer/Trailer";
 
 export default function HomePage() {
   let [video, setVideo] = useState("hidden");
@@ -17,6 +18,7 @@ export default function HomePage() {
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
   return (
     <div>
+      <Trailer videoURL={videoURL} video={video} handleVideo={handleVideo} />
       {isMobile ? (
         <></>
       ) : (
