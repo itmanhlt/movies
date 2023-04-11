@@ -10,7 +10,7 @@ export default function ItemMovie({ movie, video, videoURL, handleVideo }) {
     >
       {/* Hình ảnh phim */}
       <div
-        className="item-image relative h-[200px] w-4/12 md:w-full md:h-[314px] md:mb-3 rounded"
+        className="item-image relative h-[200px] w-4/12 md:w-full md:h-[314px] md:mb-3 lg:h-[400px] rounded"
         style={{
           backgroundImage: `url(${movie.hinhAnh})`,
           backgroundPosition: "center",

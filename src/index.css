@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+html {
+  scroll-behavior: smooth;
+}
 ion-icon {
     font-size: 30px !important;
   }
@@ -75,14 +78,14 @@ ion-icon {
   height: 100%;
 }
 
-#item-movie .item-c18{
+.item-c18{
   background-color: #f44b4e;
     border-radius: 4px;
     color: white;
     font-weight: 500;
     font-size: 1rem;
 }
-#item-movie .item-title{
+.item-title{
   font-size: 18px;
     font-weight: 500;
     display: -webkit-box;

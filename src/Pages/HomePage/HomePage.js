@@ -5,6 +5,7 @@ import SearchMovieMobileTablet from "../../Components/SearchMovie/SearchMovieMob
 import SearchMovieDesktop from "../../Components/SearchMovie/SearchMovieDesktop";
 import ListMovie from "../../Components/ListMovie/ListMovie";
 import Trailer from "../../Components/Trailer/Trailer";
+import TabMovie from "../../Components/TabMovie/TabMovie";
 
 export default function HomePage() {
   let [video, setVideo] = useState("hidden");
@@ -34,6 +35,7 @@ export default function HomePage() {
         <SearchMovieDesktop />
       )}
       <ListMovie video={video} handleVideo={handleVideo} videoURL={videoURL} />
+      {!isMobile && !isTablet ? (<TabMovie/>):(<></>)}
     </div>
   );
 }

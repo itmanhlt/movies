@@ -10,7 +10,7 @@ export default function ListMovie({ video, videoURL, handleVideo }) {
 
   const currentTableData = useMemo(() => {
     window.innerWidth > 1024 ? setPageSize(8) : setPageSize(6);
-    console.log(PageSize);
+    // console.log(PageSize);
     const firstPageIndex = (currentPage - 1) * PageSize;
     const lastPageIndex = firstPageIndex + PageSize;
     return movieArr.slice(firstPageIndex, lastPageIndex);
@@ -30,8 +30,8 @@ export default function ListMovie({ video, videoURL, handleVideo }) {
   };
   useEffect(() => {
     let test = document.querySelector(".list-movie");
-    console.log(test);
-    console.log(window.innerWidth);
+    // console.log(test);
+    // console.log(window.innerWidth);
     movieServ
       .getMovieList()
       .then((res) => {
@@ -42,7 +42,7 @@ export default function ListMovie({ video, videoURL, handleVideo }) {
 
   return (
     <div>
-      <div className="list-movie grid grid-cols-1 gap-4 md:grid-cols-3 md:px-10 lg:grid-cols-4 lg:px-48 ">
+      <div className="list-movie grid grid-cols-1 gap-4 md:grid-cols-3 md:px-10 lg:grid-cols-4 lg:px-48 " id="listMovie">
         {renderMovie()}
       </div>
       <Pagination
