@@ -16,7 +16,7 @@ export default function Carousels({ video, videoURL, handleVideo }) {
   return (
     <div id="carousel">
       {/* Trailer */}
-      <Trailer videoURL={videoURL} video={video} handleVideo={handleVideo} />
+      {/* <Trailer videoURL={videoURL} video={video} handleVideo={handleVideo} /> */}
       {/* Carousel */}
       <Carousel
         autoPlay

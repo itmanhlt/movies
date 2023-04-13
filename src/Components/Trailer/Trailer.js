@@ -2,8 +2,12 @@ import React from "react";
 
 export default function Trailer({ video, videoURL, handleVideo }) {
   return (
-    <div className="video-carousel" style={{ visibility: `${video}` }}>
-      <div className=" absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%]">
+    <div
+      className="video-carousel"
+      onClick={() => handleVideo("")}
+      style={{ visibility: `${video}` }}
+    >
+      <div className="video-wrapper">
         <button className="close" onClick={() => handleVideo("")}>
           <ion-icon name="close-outline"></ion-icon>
         </button>

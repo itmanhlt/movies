@@ -8,11 +8,9 @@ export default function ItemMovie({ movie, video, videoURL, handleVideo }) {
       id="item-movie"
       className="flex space-x-4 px-[40px] items-center md:flex-col md:space-x-0 md:px-2 md:py-1 lg:px-1"
     >
-      {/* Trailer */}
-      <Trailer videoURL={videoURL} video={video} handleVideo={handleVideo} />
       {/* Hình ảnh phim */}
       <div
-        className="item-image relative h-[200px] w-4/12 md:w-full md:h-[314px] md:mb-3 rounded"
+        className="item-image relative h-[200px] w-4/12 md:w-full md:h-[314px] md:mb-3 lg:h-[400px] rounded"
         style={{
           backgroundImage: `url(${movie.hinhAnh})`,
           backgroundPosition: "center",

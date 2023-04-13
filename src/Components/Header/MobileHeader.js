@@ -8,12 +8,12 @@ export default function MobileHeader() {
   return (
     <div>
       {/* Header */}
-      <header className="flex justify-between px-2 items-center shadow-lg shadow-gray-500/40 ">
-        <NavLink to="/" className="z-20">
-          <img src="./logo-movie.png" className="w-20" />
+      <header className="flex justify-between px-2 items-center shadow-lg shadow-gray-500/40 " id="header">
+        <NavLink to="/" className="z-20" >
+          <img src="./logo-movie.png" className="w-20" href="#header" />
         </NavLink>
-        <NavLink to="/" className="z-20">
-          <strong className="text-[#e5383b]">MOVIE THEATER</strong>
+        <NavLink to="/" className="z-20" >
+          <strong className="text-[#e5383b]" href="#header">MOVIE THEATER</strong>
         </NavLink>
         <button
           className="z-20 text-[#e5383b]"
@@ -52,7 +52,7 @@ export default function MobileHeader() {
             <li className="mr-6">
               <a
                 className="text-[#ba181b] hover:font-medium duration-200"
-                href="#"
+                href="#listMovie"
               >
                 Lịch chiếu
               </a>
@@ -60,7 +60,7 @@ export default function MobileHeader() {
             <li className="mr-6">
               <a
                 className="text-[#ba181b] hover:font-medium duration-200"
-                href="#cumRap"
+                hrehref="#tabMovie"
               >
                 Cụm rạp
               </a>

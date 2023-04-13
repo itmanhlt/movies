@@ -9,11 +9,11 @@ export default function TabletHeader() {
     <div>
       {/* Header */}
       <header className="flex justify-between px-2 items-center shadow-lg shadow-gray-500/40 ">
-        <NavLink to="/" className="z-20">
-          <img src="./logo-movie.png" className="w-20" />
+        <NavLink to="/" className="z-20" >
+          <img src="./logo-movie.png" className="w-20" href="#header" />
         </NavLink>
-        <NavLink to="/" className="z-20 text-xl">
-          <strong className="text-[#e5383b]">MOVIE THEATER</strong>
+        <NavLink to="/" className="z-20 text-xl" >
+          <strong className="text-[#e5383b]" href="#header">MOVIE THEATER</strong>
         </NavLink>
         <button
           className="z-20 text-[#e5383b]"
@@ -49,12 +49,12 @@ export default function TabletHeader() {
           <hr />
           <ul className="flex flex-col space-y-2">
             <li className="mr-6">
-              <a className="text-[#ba181b] hover:font-medium duration-200" href="#">
+              <a className="text-[#ba181b] hover:font-medium duration-200" href="#listMovie">
                 Lịch chiếu
               </a>
             </li>
             <li className="mr-6">
-              <a className="text-[#ba181b] hover:font-medium duration-200" href="#cumRap">
+              <a className="text-[#ba181b] hover:font-medium duration-200" href="#tabMovie">
                 Cụm rạp
               </a>
             </li>

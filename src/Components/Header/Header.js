@@ -6,7 +6,7 @@ import MobileHeader from './MobileHeader'
 
 export default function Header() {
   return (
-    <div>
+    <div className='fixed z-20 top-0 bg-white w-full'>
     <Desktop>
       <DesktopHeader/>
     </Desktop>
