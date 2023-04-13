@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Tabs } from 'antd';
 import { movieServ } from '../../service/movieService';
 import ItemTabMovie from './ItemTabMovie';
-import SearchMovieDesktop from '../SearchMovie/SearchMovieDesktop';
 
 export default function TabMovie() {
     let [listRap,setListRap]=useState([]);
