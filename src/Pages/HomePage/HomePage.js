@@ -6,6 +6,7 @@ import SearchMovieDesktop from "../../Components/SearchMovie/SearchMovieDesktop"
 import ListMovie from "../../Components/ListMovie/ListMovie";
 import Trailer from "../../Components/Trailer/Trailer";
 import TabMovie from "../../Components/TabMovie/TabMovie";
+import News from "../../Components/News/News";
 
 export default function HomePage() {
   let [video, setVideo] = useState("hidden");
@@ -36,6 +37,7 @@ export default function HomePage() {
       )}
       <ListMovie video={video} handleVideo={handleVideo} videoURL={videoURL} />
       {!isMobile && !isTablet ? (<TabMovie/>):(<></>)}
+      <News/>
     </div>
   );
 }

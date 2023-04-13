@@ -8,14 +8,14 @@ export default function DesktopHeader() {
     <div className="">
       <div className="flex justify-between px-4 items-center shadow-lg shadow-gray-500/40 ">
         {/* div1: icon + title */}
-        <a className="flex items-center block " href="#carousel">          
-          <NavLink to="/" className="z-20">
+        {/* <a className="flex items-center block " href="#carousel">           */}
+          <NavLink to="/" className="z-20" href="#carousel">
             <img src="./logo-movie.png" className="w-20 "/>
           </NavLink>
           <NavLink to="/" className="z-20">
             <strong className="text-[#e5383b] text-2xl">MOVIE THEATER</strong>
           </NavLink>
-        </a>
+        {/* </a> */}
         {/* div2: ul */}
         <div>
         <ul className="flex items-center text-xl">
