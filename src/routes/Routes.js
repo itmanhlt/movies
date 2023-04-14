@@ -16,7 +16,7 @@ export const movieRoutes=[
     {url:'/sign-up',
      component: <Layout2 Component={SignUpPage}/>,   
     },
-    {url:'/detail',
+    {url:'/detail/:id',
      component: <Layout1 Component={DetailPage}/>,   
     },
     {url:'*',

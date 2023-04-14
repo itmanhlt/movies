@@ -1,6 +1,7 @@
 import React from "react";
 import { Card } from "antd";
 import Trailer from "../../Trailer/Trailer";
+import { NavLink } from "react-router-dom";
 const { Meta } = Card;
 export default function ItemMovie({ movie, video, videoURL, handleVideo }) {
   return (
@@ -42,9 +43,11 @@ export default function ItemMovie({ movie, video, videoURL, handleVideo }) {
           <p className="item-desc">{movie.moTa}</p>
         </div>
         <div className="space-x-1 space-y-2 md:space-x-0">
-          <button className="bg-[#f44b4e] hover:bg-[#d2171a] text-white font-bold py-2 px-4 rounded-full w-full">
-            Mua vé
-          </button>
+          <NavLink to={`/detail/${movie.maPhim}`}>
+            <button className="bg-[#f44b4e] hover:bg-[#d2171a] text-white font-bold py-2 px-4 rounded-full w-full">
+              Mua vé
+            </button>
+          </NavLink>
         </div>
       </div>
     </div>

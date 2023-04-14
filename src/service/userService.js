@@ -13,4 +13,3 @@ export const userServ = {
 };
 
 userServ.login();
-

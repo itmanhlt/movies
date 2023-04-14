@@ -129,7 +129,7 @@ export default function MobileTabletFooter() {
           </div>
         </div>
         {/* Laptop info */}
-        <div className="sm:hidden md:hidden lg:flex pb-4">
+        <div className="lg:flex pb-4 hidden">
           {/* TIX content */}
           <div className="flex flex-col w-[30%] pr-10">
             <div className="text-[white] font-bold">TIX</div>

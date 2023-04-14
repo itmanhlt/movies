@@ -523,3 +523,13 @@ ion-icon {
         padding-top: 25%;
     }
 }
+
+#log-in, #loading {
+  background: linear-gradient(#ff966d, #fa538d, #89379c);
+}
+
+#log-in button {
+  background: linear-gradient(#ff966d, #fa538d, #89379c);
+
+}
+
