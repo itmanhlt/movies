@@ -1,7 +1,11 @@
-import React from 'react'
+import React from "react";
+import { Desktop, Mobile, Tablet } from "../../Layout/Responsive";
+import MobileTabletFooter from "./MobileTabletFooter";
 
 export default function Footer() {
   return (
-    <div>Footer</div>
-  )
+    <div >
+      <MobileTabletFooter/>
+    </div>
+  );
 }
