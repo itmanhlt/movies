@@ -68,7 +68,7 @@ export default function MobileHeader() {
             <li className="mr-6">
               <a
                 className="text-[#ba181b] hover:font-medium duration-200"
-                href="#tinTuc"
+                href="#news"
               >
                 Tin tức
               </a>

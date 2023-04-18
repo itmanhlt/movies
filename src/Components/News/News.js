@@ -12,19 +12,19 @@ export default function () {
   const items = [
     {
       key: "1",
-      label: `Điện Ảnh 24h`,
+      label: <div className="text-[#e5383b] font-medium text-[18px]">Điện Ảnh 24h</div>,
       children: children0,
       url: "https://60b9f19280400f00177b744b.mockapi.io/ArticlesDienAnh02",
     },
     {
       key: "2",
-      label: `Review`,
+      label: <div className="text-[#e5383b] font-medium text-[18px]">Review</div>,
       children: children1,
       url: "https://60babc8f42e1d0001761ff84.mockapi.io/ArticlesReview02",
     },
     {
       key: "3",
-      label: `Khuyến Mãi`,
+      label: <div className="text-[#e5383b] font-medium text-[18px]">Khuyến mãi</div>,
       children: children2,
       url: "https://60babc8f42e1d0001761ff84.mockapi.io/ArticlesKhuyenMai02",
     },
@@ -46,12 +46,33 @@ export default function () {
   }, []);
 
   let contentChildren = (index) => {
-    let contentHTML = arr[index].map((item) => {
-      return (
-        <div>
-          <img src={item.img} />
-        </div>
-      );
+    let contentHTML = arr[index].map((item, index) => {
+      if (index <= 3) {
+        if (index <= 1) {
+          return (
+            <div className="space-y-2 p-3 lg:col-span-3">
+              <img src={item.img} className="rounded-lg w-full" />
+              <p className="font-bold">{item.title}</p>
+              <p className="item-content">{item.text}</p>
+            </div>
+          );
+        } else {
+          return (
+            <div className="space-y-2 p-3 lg:col-span-2 lg:row-span-4">
+              <img src={item.img} className="rounded-lg w-full" />
+              <p className="font-bold">{item.title}</p>
+              <p className="item-content text-justify pr-30">{item.text}</p>
+            </div>
+          );
+        }
+      } else {
+        return (
+          <div className="space-y-2 p-3 flex space-x-3 lg:col-span-2">
+            <img src={item.img} className="rounded-lg w-[50px]" />
+            <p className="truncate">{item.title}</p>
+          </div>
+        );
+      }
     });
     if (index == 0) {
       setChildren0(contentHTML);
@@ -61,14 +82,20 @@ export default function () {
       setChildren2(contentHTML);
     }
   };
+  console.log("child0: ", children0);
+  console.log("child1: ", children1);
+  console.log("child2: ", children2);
+
   let test = () => {
     if (check == "Rút gọn") {
       setCheck("Xem thêm");
+      document.querySelector('#news .ant-tabs-content-holder').style.display="none";
       items.map((item) => {
         return (item.children = "");
       });
     } else {
       setCheck("Rút gọn");
+      document.querySelector('#news .ant-tabs-content-holder').style.display="block";
       items.map((item, index) => {
         return contentChildren(index);
       });
@@ -76,15 +103,20 @@ export default function () {
   };
 
   return (
-    <div>
-      <Tabs defaultActiveKey="1" items={items} />
-      <button
-        type="button"
-        className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-        onClick={test}
-      >
-        {check}
-      </button>
+    <div
+      id="news"
+      className="lg:px-48 md:px-10 mt-10 flex justify-center flex-col"
+    >
+      <Tabs items={items} centered />
+      <div className="text-center py-10">
+        <button
+          type="button"
+          className="bg-[#f44b4e] hover:bg-[#d2171a] text-white font-bold py-2 px-4 rounded"
+          onClick={test}
+        >
+          {check}
+        </button>
+      </div>
     </div>
   );
 }

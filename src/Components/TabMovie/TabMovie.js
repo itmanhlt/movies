@@ -15,19 +15,21 @@ export default function TabMovie() {
         label: <img src={rap.logo} className="w-14"></img>,
         children: (
           <Tabs
+          id="sub-tab"
             defaultActiveKey="1"
-            style={{ height: 700 }}
+            style={{ height: 700}}
             items={rap.lstCumRap.map((cumRap) => {
               return {
                 key: cumRap.tenCumRap,
                 label: (
-                  <div className="w-[350px] truncate flex flex-col items-start border-b-[1.5px]">
+                  <div className="w-full truncate flex flex-col items-start border-b-[1.5px]">
                     <p
                       style={{
                         color: "#E5383B",
                         fontSize: "16px",
                         fontWeight: 500,
                       }}
+                      className="truncate"
                     >
                       {cumRap.tenCumRap}
                     </p>

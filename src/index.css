@@ -219,6 +219,9 @@ ion-icon {
     left: 50%;
     transform: translate(-50%,-50%);
   }
+  #news .ant-tabs-tabpane-active{
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    display: grid;}
 }
 
 #search-movie{
@@ -530,6 +533,18 @@ ion-icon {
 
 #log-in button {
   background: linear-gradient(#ff966d, #fa538d, #89379c);
-
+}
+#news .item-content{
+  overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+#news .ant-tabs-ink-bar {
+  height: 2px;
+  background: #BF2D30 !important;
 }
 
+#tabMovie #sub-tab .ant-tabs-nav{
+  width: 40%;
+}

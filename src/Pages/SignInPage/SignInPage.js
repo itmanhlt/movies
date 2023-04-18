@@ -1,11 +1,12 @@
 import React from "react";
+import Lottie from "lottie-react";
 import { Button, Checkbox, Form, Input, Typography, message } from "antd";
 import { userServ } from "../../service/userService";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { SET_USER_LOGIN } from "../../redux/constant/userConstant";
 import { localUserServ } from "../../service/localService";
-
+import login_animate from "../../asset/AnikiHamster.json"
   const LoginPage = () => { 
     let navigate= useNavigate();
     let dispatch= useDispatch();
@@ -21,7 +22,9 @@ import { localUserServ } from "../../service/localService";
         localUserServ.set(res.data.content)
         navigate("/")
       })
-      .catch((err) => {"Đăng nhập thất bại"})
+      .catch((err) => {
+        message.error("Đăng nhập thất bại")
+      })
     };
     const onFinishFailed = (errorInfo) => {
       console.log("Failed:", errorInfo);
@@ -32,11 +35,9 @@ import { localUserServ } from "../../service/localService";
       className="w-screen h-screen p-20 flex justify-center items-center"
       id="log-in"
     >
-      <div className="container  p-20 bg-white rounded-lg flex ">
-        {/* <div className="w-1/2 h-full ">
-          <Lottie animationData={login_animate} loop={true} />
-        </div> */}
-        <div className="w-1/2 h-full ">
+      <div className="container p-9 lg:p-20 bg-white rounded-lg flex items-center">
+        
+        <div className=" w-full lg:w-1/2 h-full pt-5">
           <Form
             name="basic"
             labelCol={{
@@ -50,7 +51,7 @@ import { localUserServ } from "../../service/localService";
               remember: true,
             }}
             onFinish={onFinish}
-            // onFinishFailed={onFinishFailed}
+            onFinishFailed={onFinishFailed}
             autoComplete="off"
             layout="vertical"
           >
@@ -112,6 +113,9 @@ import { localUserServ } from "../../service/localService";
               </Typography.Link>
             </Form.Item>
           </Form>
+        </div>
+        <div className=" hidden lg:block lg:w-1/2 h-full">
+          <Lottie animationData={login_animate} loop={true} />
         </div>
       </div>
     </div>

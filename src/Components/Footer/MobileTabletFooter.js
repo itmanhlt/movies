@@ -84,9 +84,9 @@ export default function MobileTabletFooter() {
     },
   ];
   let renderDoiTac = () => {
-    return src.map((item) => {
+    return src.map((item,index) => {
       return (
-        <a target="_blank" href={item.href} className="w-10 h-10">
+        <a target="_blank" href={item.href} key={index} className="w-10 h-10">
           <img
             src={item.src}
             className="w-10 hover:filter hover:grayscale rounded-full"
