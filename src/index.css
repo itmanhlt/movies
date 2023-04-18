@@ -545,4 +545,6 @@ ion-icon {
   background: #BF2D30 !important;
 }
 
-
+#tabMovie #sub-tab .ant-tabs-nav{
+  width: 40%;
+}
