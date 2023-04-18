@@ -59,7 +59,7 @@ export default function TabletHeader() {
               </a>
             </li>
             <li className="mr-6">
-              <a className="text-[#ba181b] hover:font-medium duration-200" href="#tinTuc">
+              <a className="text-[#ba181b] hover:font-medium duration-200" href="#news">
                 Tin tức
               </a>
             </li>

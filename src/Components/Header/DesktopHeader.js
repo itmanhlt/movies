@@ -8,13 +8,13 @@ export default function DesktopHeader() {
     <div className="">
       <div className="flex justify-between px-4 items-center shadow-lg shadow-gray-500/40 ">
         {/* div1: icon + title */}
-        <a className="flex items-center block " href="#carousel">          
-          <NavLink to="/" className="z-20" href="#carousel">
+        <a className="flex items-center block" href="/">          
+          {/* <NavLink to="/" className="z-20" href="#carousel"> */}
             <img src="./logo-movie.png" className="w-20 "/>
-          </NavLink>
-          <NavLink to="/" className="z-20">
+          {/* </NavLink> */}
+          {/* <NavLink to="/" className="z-20"> */}
             <strong className="text-[#e5383b] text-2xl">MOVIE THEATER</strong>
-          </NavLink>
+          {/* </NavLink> */}
         </a>
         {/* div2: ul */}
         <div>
@@ -30,7 +30,7 @@ export default function DesktopHeader() {
               </a>
             </li>
             <li className="mr-6">
-              <a className="text-[#ba181b] hover:font-medium duration-200" href="#tinTuc">
+              <a className="text-[#ba181b] hover:font-medium duration-200" href="#news">
                 Tin tức
               </a>
             </li>
