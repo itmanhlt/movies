@@ -1,2 +1,7 @@
-export const SET_USER_LOGIN=  "SET_USER_LOGIN"
-export const SET_USER_LOGOUT=  "SET_USER_LOGOUT"
+export const SET_USER_LOGIN = "SET_USER_LOGIN";
+export const SET_USER_LOGOUT = "SET_USER_LOGOUT";
+export const SET_MOVIE_ARR = "SET_MOVIE_ARR";
+export const SET_LOADING_ON = "SET_LOADING_ON";
+export const SET_LOADING_OFF = "SET_LOADING_OFF";
+export const SHOW_TRAILER = "SHOW_TRAILER";
+

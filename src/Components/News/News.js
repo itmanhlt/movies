@@ -3,7 +3,7 @@ import { Button, Tabs } from "antd";
 import { newsServ } from "../../service/newsService";
 import { movieServ } from "../../service/movieService";
 
-export default function () {
+export default function News() {
   let [check, setCheck] = useState("Xem thêm");
   let [arr, setArr] = useState([]);
   let [children0, setChildren0] = useState(<></>);
@@ -12,19 +12,27 @@ export default function () {
   const items = [
     {
       key: "1",
-      label: <div className="text-[#e5383b] font-medium text-[18px]">Điện Ảnh 24h</div>,
+      label: (
+        <div className="text-[#e5383b] font-medium text-[18px]">
+          Điện Ảnh 24h
+        </div>
+      ),
       children: children0,
       url: "https://60b9f19280400f00177b744b.mockapi.io/ArticlesDienAnh02",
     },
     {
       key: "2",
-      label: <div className="text-[#e5383b] font-medium text-[18px]">Review</div>,
+      label: (
+        <div className="text-[#e5383b] font-medium text-[18px]">Review</div>
+      ),
       children: children1,
       url: "https://60babc8f42e1d0001761ff84.mockapi.io/ArticlesReview02",
     },
     {
       key: "3",
-      label: <div className="text-[#e5383b] font-medium text-[18px]">Khuyến mãi</div>,
+      label: (
+        <div className="text-[#e5383b] font-medium text-[18px]">Khuyến mãi</div>
+      ),
       children: children2,
       url: "https://60babc8f42e1d0001761ff84.mockapi.io/ArticlesKhuyenMai02",
     },
@@ -82,20 +90,22 @@ export default function () {
       setChildren2(contentHTML);
     }
   };
-  console.log("child0: ", children0);
-  console.log("child1: ", children1);
-  console.log("child2: ", children2);
+  // console.log("child0: ", children0);
+  // console.log("child1: ", children1);
+  // console.log("child2: ", children2);
 
   let test = () => {
     if (check == "Rút gọn") {
       setCheck("Xem thêm");
-      document.querySelector('#news .ant-tabs-content-holder').style.display="none";
+      document.querySelector("#news .ant-tabs-content-holder").style.display =
+        "none";
       items.map((item) => {
         return (item.children = "");
       });
     } else {
       setCheck("Rút gọn");
-      document.querySelector('#news .ant-tabs-content-holder').style.display="block";
+      document.querySelector("#news .ant-tabs-content-holder").style.display =
+        "block";
       items.map((item, index) => {
         return contentChildren(index);
       });

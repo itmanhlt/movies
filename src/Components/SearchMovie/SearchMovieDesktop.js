@@ -2,9 +2,13 @@ import React, { useEffect, useMemo, useState } from "react";
 import { movieServ } from "../../service/movieService";
 import moment from "moment";
 import { message, notification } from "antd";
+import { useDispatch, useSelector } from "react-redux";
+import { SET_MOVIE_ARR } from "../../redux/constant/userConstant";
 
 export default function SearchMovieDesktop() {
-  let [movieArr, setMovieArr] = useState([]);
+  // let [movieArr, setMovieArr] = useState([])
+  let movieArr=useSelector(state=>state.movieReducer.movieArr)
+  let dispatch=useDispatch()
   let [heThongRapChieuArr, setHeThongRapChieu] = useState([]);
   let [lichChieuPhim, setLichChieuPhim] = useState([]);
   let [maPhimCu, setMaPhimCu] = useState("");
@@ -13,7 +17,10 @@ export default function SearchMovieDesktop() {
     movieServ
       .getMovieList()
       .then((res) => {
-        setMovieArr(res.data.content);
+        dispatch({
+          type: SET_MOVIE_ARR,
+          payload: res.data.content
+        });
       })
       .catch((err) => console.log(err));
   }, []);
@@ -44,7 +51,7 @@ export default function SearchMovieDesktop() {
       setHeThongRapChieu([]);
       setMaPhimCu(maPhim);
     } else {
-      movieServ.getSearchMovie(maPhim).then((res) => {
+      movieServ.getSearchMovieDesktop(maPhim).then((res) => {
         setHeThongRapChieu(res.data.content.heThongRapChieu);
       });
     }

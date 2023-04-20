@@ -2,8 +2,12 @@ import React, { useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import Trailer from "../Trailer/Trailer";
+import { useDispatch } from "react-redux";
+import { SHOW_TRAILER } from "../../redux/constant/userConstant";
 
-export default function Carousels({ video, videoURL, handleVideo }) {
+export default function Carousels() {
+  let dispatch = useDispatch();
+
   const arrowStyles = {
     position: "absolute",
     zIndex: 2,
@@ -54,9 +58,13 @@ export default function Carousels({ video, videoURL, handleVideo }) {
         <div>
           <button
             onClick={() =>
-              handleVideo(
-                "https://www.youtube.com/embed/kBY2k3G6LsM?autoplay=1"
-              )
+              dispatch({
+                type: SHOW_TRAILER,
+                payload: {
+                  status: "visible",
+                  url: "https://www.youtube.com/embed/kBY2k3G6LsM?autoplay=1",
+                },
+              })
             }
             className="play-carousel absolute left-[50%] top-[50%] arrow-carousel bg-[##ffffff61] rounded-full pt-[6.5px] pl-[6.5px] translate-y-[-50%] translate-x-[-50%]"
           >
@@ -68,9 +76,13 @@ export default function Carousels({ video, videoURL, handleVideo }) {
         <div>
           <button
             onClick={() =>
-              handleVideo(
-                "https://www.youtube.com/embed/uqJ9u7GSaYM?autoplay=1"
-              )
+              dispatch({
+                type: SHOW_TRAILER,
+                payload: {
+                  status: "visible",
+                  url: "https://www.youtube.com/embed/uqJ9u7GSaYM?autoplay=1",
+                },
+              })
             }
             className="play-carousel absolute left-[50%] top-[50%] arrow-carousel bg-[##ffffff61] rounded-full pt-[6.5px] pl-[6.5px] translate-y-[-50%] translate-x-[-50%]"
           >
@@ -82,9 +94,13 @@ export default function Carousels({ video, videoURL, handleVideo }) {
         <div>
           <button
             onClick={() =>
-              handleVideo(
-                "https://www.youtube.com/embed/JNZv1SgHv68?autoplay=1"
-              )
+              dispatch({
+                type: SHOW_TRAILER,
+                payload: {
+                  status: "visible",
+                  url: "https://www.youtube.com/embed/JNZv1SgHv68?autoplay=1",
+                },
+              })
             }
             className="play-carousel absolute left-[50%] top-[50%] arrow-carousel bg-[##ffffff61] rounded-full pt-[6.5px] pl-[6.5px] translate-y-[-50%] translate-x-[-50%]"
           >
