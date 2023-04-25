@@ -10,6 +10,12 @@ export const userServ = {
       headers: configHeaders(),
     });
   },
+  logup: (data) => {
+    return axios({
+      url: `${BASE_URL}/api/QuanLyNguoiDung/DangKy`,
+      method: "POST",
+      data: data,
+      headers: configHeaders(),
+    });
+  },
 };
-
-

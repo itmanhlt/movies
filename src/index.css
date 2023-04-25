@@ -548,3 +548,11 @@ ion-icon {
 #tabMovie #sub-tab .ant-tabs-nav{
   width: 40%;
 }
+#log-up{
+  background: linear-gradient(#ff966d, #fa538d, #89379c);
+  height: 100%;
+}
+
+#log-up button {
+  background: linear-gradient(#ff966d, #fa538d, #89379c);
+}
