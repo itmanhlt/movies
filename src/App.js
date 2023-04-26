@@ -1,7 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Header from "./Components/Header/Header";
 import { movieRoutes } from "./routes/Routes";
 import Loading from "./Components/Loading/Loading";
 import Trailer from "./Components/Trailer/Trailer";

@@ -8,6 +8,7 @@ import Trailer from "../../Components/Trailer/Trailer";
 import TabMovie from "../../Components/TabMovie/TabMovie";
 import News from "../../Components/News/News";
 import { useSelector } from "react-redux";
+import Application from "../../Components/Application/Application";
 
 export default function HomePage() {
   const isMobile = useMediaQuery({ maxWidth: 767 });
@@ -23,7 +24,7 @@ export default function HomePage() {
       <ListMovie />
       {!isMobile && !isTablet ? <TabMovie /> : <></>}
       <News />
+      <Application />
     </div>
   );
 }
-

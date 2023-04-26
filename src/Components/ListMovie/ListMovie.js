@@ -14,7 +14,6 @@ export default function ListMovie() {
 
   const currentTableData = useMemo(() => {
     window.innerWidth > 1024 ? setPageSize(8) : setPageSize(6);
-    // console.log(PageSize);
     const firstPageIndex = (currentPage - 1) * PageSize;
     const lastPageIndex = firstPageIndex + PageSize;
     return movieArr.slice(firstPageIndex, lastPageIndex);
@@ -25,13 +24,9 @@ export default function ListMovie() {
     });
   };
   useEffect(() => {
-    // let test = document.querySelector(".list-movie");
-    // console.log(test);
-    // console.log(window.innerWidth);
     movieServ
       .getMovieList()
       .then((res) => {
-        // setMovieArr(res.data.content);
         dispatch({ type: SET_MOVIE_ARR, payload: res.data.content });
       })
       .catch((err) => console.log(err));

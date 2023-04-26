@@ -58,7 +58,7 @@ export default function News() {
       if (index <= 3) {
         if (index <= 1) {
           return (
-            <div className="space-y-2 p-3 lg:col-span-3">
+            <div key={index} className="space-y-2 p-3 lg:col-span-3">
               <img src={item.img} className="rounded-lg w-full" />
               <p className="font-bold">{item.title}</p>
               <p className="item-content">{item.text}</p>
@@ -66,7 +66,10 @@ export default function News() {
           );
         } else {
           return (
-            <div className="space-y-2 p-3 lg:col-span-2 lg:row-span-4">
+            <div
+              key={index}
+              className="space-y-2 p-3 lg:col-span-2 lg:row-span-4"
+            >
               <img src={item.img} className="rounded-lg w-full" />
               <p className="font-bold">{item.title}</p>
               <p className="item-content text-justify pr-30">{item.text}</p>
@@ -75,7 +78,10 @@ export default function News() {
         }
       } else {
         return (
-          <div className="space-y-2 p-3 flex space-x-3 lg:col-span-2">
+          <div
+            key={index}
+            className="space-y-2 p-3 flex space-x-3 lg:col-span-2"
+          >
             <img src={item.img} className="rounded-lg w-[50px]" />
             <p className="truncate">{item.title}</p>
           </div>
@@ -90,10 +96,6 @@ export default function News() {
       setChildren2(contentHTML);
     }
   };
-  // console.log("child0: ", children0);
-  // console.log("child1: ", children1);
-  // console.log("child2: ", children2);
-
   let test = () => {
     if (check == "Rút gọn") {
       setCheck("Xem thêm");

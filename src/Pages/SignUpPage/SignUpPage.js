@@ -254,9 +254,7 @@ export default function SignUpPage() {
                           setMaNhom(e.target.value);
                         }}
                       >
-                        <option value="GP01" selected>
-                          GP01
-                        </option>
+                        <option value="GP01">GP01</option>
                         <option value="GP02">GP02</option>
                         <option value="GP03">GP03</option>
                         <option value="GP04">GP04</option>
