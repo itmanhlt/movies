@@ -111,8 +111,11 @@ export default function SignUpPage() {
       ktrRong(soDt, "soDtText");
     if (isValid) {
       // ktra trùng (taiKhoan & email) && ktr taiKhoan
-      isValid = ktrTrung(taiKhoan, email) && ktrTaiKhoan(taiKhoan);
-      isValid = isValid & ktrEmail(email) & ktraSDT(soDt);
+      isValid = ktrTrung(taiKhoan, email);
+      if (isValid) {
+        isValid = ktrTaiKhoan(taiKhoan);
+        isValid = isValid & ktrEmail(email) & ktraSDT(soDt);
+      }
     }
     return isValid;
   };

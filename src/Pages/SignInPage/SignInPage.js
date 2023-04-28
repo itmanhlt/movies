@@ -32,7 +32,7 @@ const LoginPage = () => {
 
   return (
     <div
-      className="w-screen h-screen p-20 flex justify-center items-center lg:mt-5"
+      className="h-screeen p-14 pt-[133px] flex justify-center items-center "
       id="log-in"
     >
       <div className="container p-9 lg:p-20 bg-white rounded-lg flex items-center">
