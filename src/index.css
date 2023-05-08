@@ -529,6 +529,7 @@ ion-icon {
 
 #log-in, #loading {
   background: linear-gradient(#ff966d, #fa538d, #89379c);
+  height: 100vh;
 }
 
 #log-in button {
@@ -547,4 +548,35 @@ ion-icon {
 
 #tabMovie #sub-tab .ant-tabs-nav{
   width: 40%;
+}
+#log-up{
+  background: linear-gradient(#ff966d, #fa538d, #89379c);
+  height: 100vh;
+}
+
+#log-up button {
+  background: linear-gradient(#ff966d, #fa538d, #89379c);
+}
+
+/* details page  */
+.play-details {
+  opacity: 0;
+  border: #e94444e3 4px solid;
+  color: rgb(249 43 47 / 80%);
+  background: #ffffff4d;
+  transition: all.8s;
+}
+
+.image-details:hover .play-details {
+  opacity: 1;
+}
+
+/* aplication  */
+#ungDung {
+  background: url(https://demo1.cybersoft.edu.vn/static/media/backapp.b46ef3a1.jpg);
+  background-size: contain;
+}
+
+#ungDung .slider-wrapper {
+  border-radius: 20px;
 }

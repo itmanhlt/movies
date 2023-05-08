@@ -6,37 +6,36 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { SET_USER_LOGIN } from "../../redux/constant/userConstant";
 import { localUserServ } from "../../service/localService";
-import login_animate from "../../asset/AnikiHamster.json"
-  const LoginPage = () => { 
-    let navigate= useNavigate();
-    let dispatch= useDispatch();
-    const onFinish = (values) => {
-      userServ
+import login_animate from "../../asset/AnikiHamster.json";
+const LoginPage = () => {
+  let navigate = useNavigate();
+  let dispatch = useDispatch();
+  const onFinish = (values) => {
+    userServ
       .login(values)
       .then((res) => {
-        message.success("Đăng nhập thành công")
+        message.success("Đăng nhập thành công");
         dispatch({
           type: SET_USER_LOGIN,
           payload: res.data.content,
-        })
-        localUserServ.set(res.data.content)
-        navigate("/")
+        });
+        localUserServ.set(res.data.content);
+        navigate("/");
       })
       .catch((err) => {
-        message.error("Đăng nhập thất bại")
-      })
-    };
-    const onFinishFailed = (errorInfo) => {
-      console.log("Failed:", errorInfo);
-    };
-  
-    return (
+        message.error("Đăng nhập thất bại");
+      });
+  };
+  const onFinishFailed = (errorInfo) => {
+    console.log("Failed:", errorInfo);
+  };
+
+  return (
     <div
-      className="w-screen h-screen p-20 flex justify-center items-center"
+      className="h-full p-14 pt-[133px] flex justify-center items-center "
       id="log-in"
     >
       <div className="container p-9 lg:p-20 bg-white rounded-lg flex items-center">
-        
         <div className=" w-full lg:w-1/2 h-full pt-5">
           <Form
             name="basic"
@@ -121,6 +120,5 @@ import login_animate from "../../asset/AnikiHamster.json"
     </div>
   );
 };
- 
 
-  export default LoginPage;
+export default LoginPage;

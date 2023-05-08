@@ -10,9 +10,15 @@ export const movieServ = {
     );
   },
   getDetailMovie: (id) => {
-    return https.get(`/api/QuanLyPhim/LayThongTinPhim?MaPhim=${id}`);
+    return https.get(`/api/QuanLyRap/LayThongTinLichChieuPhim?MaPhim=${id}`);
   },
-  getSearchMovie: (id) => {
+  getSearchMovieMobile: (name) => {
+    return https.get(
+      `/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP09&tenPhim=${name}`
+    );
+  },
+  getSearchMovieDesktop: (id) => {
     return https.get(`/api/QuanLyRap/LayThongTinLichChieuPhim?MaPhim=${id}`);
   },
 };
+

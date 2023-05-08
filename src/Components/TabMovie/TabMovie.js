@@ -6,7 +6,6 @@ import ItemTabMovie from "./ItemTabMovie";
 export default function TabMovie() {
   let [listRap, setListRap] = useState([]);
   const onChange = (key) => {
-    console.log(key);
   };
   let renderListRap = () => {
     return listRap.map((rap, index) => {
@@ -65,7 +64,6 @@ export default function TabMovie() {
     movieServ
       .getMovieTheater()
       .then((res) => {
-        // console.log(res.data.content);
         setListRap(res.data.content);
       })
       .catch((err) => {

@@ -8,42 +8,54 @@ export default function DesktopHeader() {
     <div className="">
       <div className="flex justify-between px-4 items-center shadow-lg shadow-gray-500/40 ">
         {/* div1: icon + title */}
-        <a className="flex items-center block" href="/">          
+        <a className="flex items-center" href="/">
           {/* <NavLink to="/" className="z-20" href="#carousel"> */}
-            <img src="./logo-movie.png" className="w-20 "/>
+          <img src="./logo-movie.png" className="w-20 " />
           {/* </NavLink> */}
           {/* <NavLink to="/" className="z-20"> */}
-            <strong className="text-[#e5383b] text-2xl">MOVIE THEATER</strong>
+          <strong className="text-[#e5383b] text-2xl">MOVIE THEATER</strong>
           {/* </NavLink> */}
         </a>
         {/* div2: ul */}
         <div>
-        <ul className="flex items-center text-xl">
+          <ul className="flex items-center text-xl">
             <li className="mr-6">
-              <a className="text-[#ba181b] hover:font-medium duration-200" href="#listMovie">
+              <a
+                className="text-[#ba181b] hover:font-medium duration-200"
+                href="#listMovie"
+              >
                 Lịch chiếu
               </a>
             </li>
             <li className="mr-6">
-              <a className="text-[#ba181b] hover:font-medium duration-200" href="#tabMovie">
+              <a
+                className="text-[#ba181b] hover:font-medium duration-200"
+                href="#tabMovie"
+              >
                 Cụm rạp
               </a>
             </li>
             <li className="mr-6">
-              <a className="text-[#ba181b] hover:font-medium duration-200" href="#news">
+              <a
+                className="text-[#ba181b] hover:font-medium duration-200"
+                href="#news"
+              >
                 Tin tức
               </a>
             </li>
             <li className="mr-6">
-              <a className="text-[#ba181b] hover:font-medium duration-200" href="#ungDung">
+              <a
+                className="text-[#ba181b] hover:font-medium duration-200"
+                href="#ungDung"
+              >
                 Ứng dụng
               </a>
             </li>
           </ul>
         </div>
         {/* div3 */}
-        <div >
-        <UserMenu />
+        <div>
+          <UserMenu />
         </div>
       </div>
     </div>
