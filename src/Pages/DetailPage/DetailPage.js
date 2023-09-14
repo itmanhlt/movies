@@ -90,7 +90,9 @@ export default function DetailPage() {
                   type: SHOW_TRAILER,
                   payload: {
                     status: "visible",
-                    url: movie.trailer + "?autoplay=1",
+                    url: (movie.trailer =
+                      movie.trailer.replace("watch?v=", "embed/") +
+                      "?autoplay=1"),
                   },
                 })
               }

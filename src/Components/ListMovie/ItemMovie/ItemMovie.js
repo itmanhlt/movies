@@ -7,6 +7,7 @@ import { SHOW_TRAILER } from "../../../redux/constant/userConstant";
 const { Meta } = Card;
 export default function ItemMovie({ movie }) {
   let dispatch = useDispatch();
+
   if (movie !== "") {
     return (
       <div
@@ -33,7 +34,9 @@ export default function ItemMovie({ movie }) {
                   type: SHOW_TRAILER,
                   payload: {
                     status: "visible",
-                    url: movie.trailer + "?autoplay=1",
+                    url: (movie.trailer =
+                      movie.trailer.replace("watch?v=", "embed/") +
+                      "?autoplay=1"),
                   },
                 });
               }}

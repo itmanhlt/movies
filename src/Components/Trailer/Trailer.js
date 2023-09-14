@@ -27,14 +27,16 @@ export default function Trailer() {
           <ion-icon name="close-outline"></ion-icon>
         </button>
         <iframe
+          width="560"
+          height="315"
           src={videoURL}
           title="YouTube video player"
-          frameBorder={0}
-          allow="accelerometer; autoplay; clipboardgi-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
-        />
+        ></iframe>
+        ;
       </div>
     </div>
   );
 }
-
