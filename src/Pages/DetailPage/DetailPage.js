@@ -33,8 +33,7 @@ export default function DetailPage() {
       });
   }, []);
 
-  const onChange = (key) => {
-  };
+  const onChange = (key) => {};
   let items = () => {
     return rapChieu.map((item) => {
       return {
