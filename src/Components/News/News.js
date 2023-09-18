@@ -54,6 +54,8 @@ export default function News() {
   }, []);
 
   let contentChildren = (index) => {
+    console.log(index);
+    console.log(arr[index]);
     let contentHTML = arr[index].map((item, index) => {
       if (index <= 3) {
         if (index <= 1) {
